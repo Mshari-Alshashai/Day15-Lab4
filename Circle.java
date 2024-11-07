@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Circle extends Shape{
 
     private double radius;
@@ -17,12 +19,14 @@ public class Circle extends Shape{
     }
 
     @Override
-    public double calculateArea() {
-        return (Math.PI*(radius*radius));
+    public void calculateArea() {
+        DecimalFormat df = new DecimalFormat("#.00");
+        System.out.println((df.format(Math.PI*(radius*radius))));
     }
 
     @Override
-    public double calculateCircumference() {
-        return 2*Math.PI*radius;
+    public void calculateCircumference() {
+        DecimalFormat df = new DecimalFormat("#.00");
+        System.out.println((df.format(2*Math.PI*radius)));
     }
 }
