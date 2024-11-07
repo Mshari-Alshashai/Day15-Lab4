@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Triangle extends Shape{
 
     private double height;
@@ -27,12 +29,14 @@ public class Triangle extends Shape{
     }
 
     @Override
-    public double calculateArea() {
-        return (0.5*base*height);
+    public void calculateArea() {
+        DecimalFormat df = new DecimalFormat("#.00");
+        System.out.println((df.format(0.5*base*height)));
     }
 
     @Override
-    public double calculateCircumference() {
-        return base*3;
+    public void calculateCircumference() {
+        DecimalFormat df = new DecimalFormat("#.00");
+        System.out.println((df.format(base*3)));
     }
 }
