@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Rectangle extends Shape{
 
     private double height;
@@ -27,12 +29,14 @@ public class Rectangle extends Shape{
     }
 
     @Override
-    public double calculateArea() {
-        return height*width;
+    public void calculateArea() {
+        DecimalFormat df = new DecimalFormat("#.00");
+        System.out.println((df.format(height*width)));
     }
 
     @Override
-    public double calculateCircumference() {
-        return ((2*height)+(2*width));
+    public void calculateCircumference() {
+        DecimalFormat df = new DecimalFormat("#.00");
+        System.out.println((df.format(((2*height)+(2*width)))));
     }
 }
